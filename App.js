@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import ThirdBtn from './ThirdBtn';
+import DisplayAnImage from './Image';
 import {
   StyleSheet,
   Text,
@@ -9,7 +11,8 @@ import {
   Image,
   FlatList,
   Platform,
-  ActivityIndicator
+  ActivityIndicator,
+  Alert
 } from 'react-native';
 
 export default function App() {
@@ -24,6 +27,7 @@ export default function App() {
           <Button
             title="Increment + 1"
             onPress={() => {
+              Alert.alert('+1');
               setCount(count + 1);
             }}
           />
@@ -82,6 +86,8 @@ export default function App() {
           <ActivityIndicator />
           <ActivityIndicator size="large" color="black" />
         </View>
+        <DisplayAnImage />
+        <ThirdBtn />
       </ScrollView>
     </View>
   );
