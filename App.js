@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import ThirdBtn from './ThirdBtn';
 import DisplayAnImage from './Image';
+import LogoInside from './LogoInside';
+import ModalWindow from './modal';
 import {
   StyleSheet,
   Text,
@@ -86,6 +88,8 @@ export default function App() {
           <ActivityIndicator />
           <ActivityIndicator size="large" color="black" />
         </View>
+        <ModalWindow />
+        <LogoInside />
         <DisplayAnImage />
         <ThirdBtn />
       </ScrollView>
